@@ -28,6 +28,9 @@
     "url": "https://github.com/rynomad"
     }
   ],
+  "dependencies": {
+    "jsbn": "*"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/quartzjer/ecc-jsbn/issues"
