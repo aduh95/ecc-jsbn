@@ -1,6 +1,6 @@
 {
   "name": "ecc-jsbn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ECC JS code based on JSBN",
   "main": "index.js",
   "repository": {
@@ -29,7 +29,7 @@
     }
   ],
   "dependencies": {
-    "jsbn": "*"
+    "jsbn": "git+https://github.com/rynomad/jsbn.git"
   },
   "license": "MIT",
   "bugs": {
