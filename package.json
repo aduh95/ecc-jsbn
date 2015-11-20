@@ -29,7 +29,7 @@
     }
   ],
   "dependencies": {
-    "jsbn": "git+https://github.com/rynomad/jsbn.git"
+    "jsbn": "~0.1.0"
   },
   "license": "MIT",
   "bugs": {
