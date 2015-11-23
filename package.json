@@ -1,6 +1,6 @@
 {
   "name": "ecc-jsbn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ECC JS code based on JSBN",
   "main": "index.js",
   "repository": {
@@ -19,13 +19,13 @@
   },
   "maintainers": [
     {
-    "name": "Jeremie Miller",
-    "email": "jeremie@jabber.org",
-    "url": "http://jeremie.com/"
+      "name": "Jeremie Miller",
+      "email": "jeremie@jabber.org",
+      "url": "http://jeremie.com/"
     },
     {
-    "name": "Ryan Bennett",
-    "url": "https://github.com/rynomad"
+      "name": "Ryan Bennett",
+      "url": "https://github.com/rynomad"
     }
   ],
   "dependencies": {
