@@ -1,5 +1,5 @@
 var crypto = require("crypto");
-var BigInteger = require("jsbn");
+var BigInteger = require("jsbn").BigInteger;
 var ECPointFp = require("./lib/ec.js").ECPointFp;
 exports.ECCurves = require("./lib/sec.js");
 
