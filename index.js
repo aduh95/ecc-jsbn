@@ -1,7 +1,7 @@
 "use strict";
 
-var crypto = require("crypto");
-var BigInteger = require("jsbn").BigInteger;
+const crypto = require("crypto");
+const { BigInteger } = require("jsbn");
 
 exports.ECCurves = require("./lib/sec.js");
 

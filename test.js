@@ -1,16 +1,33 @@
 "use strict";
 
-var ecc = require("./index.js");
-var key1 = new ecc.ECKey(ecc.ECCurves.secp160r1);
-var key2 = new ecc.ECKey(ecc.ECCurves.secp160r1);
-console.log(key1.deriveSharedSecret(key2));
-var key3 = new ecc.ECKey(ecc.ECCurves.secp160r1, key1.PrivateKey);
-var key4 = new ecc.ECKey(ecc.ECCurves.secp160r1, key2.PublicKey, true);
-console.log(key3.deriveSharedSecret(key4));
+const assert = require("assert");
+const { ECKey, ECCurves } = require("./index.js");
 
-var key1 = new ecc.ECKey(ecc.ECCurves.secp256r1);
-var key2 = new ecc.ECKey(ecc.ECCurves.secp256r1);
-console.log(key1.deriveSharedSecret(key2));
-var key3 = new ecc.ECKey(ecc.ECCurves.secp256r1, key1.PrivateKey);
-var key4 = new ecc.ECKey(ecc.ECCurves.secp256r1, key2.PublicKey, true);
-console.log(key3.deriveSharedSecret(key4));
+const testCurve = curve => {
+  const key1 = new ECKey(curve);
+  const key2 = new ECKey(curve);
+
+  const key3 = new ECKey(curve, key1.PrivateKey);
+  const key4 = new ECKey(curve, key2.PublicKey, true);
+
+  assert.strictEqual(
+    Buffer.compare(
+      key1.deriveSharedSecret(key2),
+      key3.deriveSharedSecret(key4)
+    ),
+    0
+  );
+};
+
+try {
+  Object.keys(ECCurves)
+    .map(curveName => ECCurves[curveName])
+    .forEach(testCurve);
+
+  console.log("Test OK");
+} catch (e) {
+  console.error(e);
+
+  console.log("Test FAILURE");
+  process.exit(1);
+}

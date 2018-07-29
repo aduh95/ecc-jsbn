@@ -26,8 +26,15 @@
     {
       "name": "Ryan Bennett",
       "url": "https://github.com/rynomad"
+    },
+    {
+      "name": "Antoine du Hamel",
+      "email": "duhamelantoine1995@gmail.com"
     }
   ],
+  "scripts": {
+    "preversion": "node ./test.js"
+  },
   "dependencies": {
     "jsbn": "~0.1.0"
   },
