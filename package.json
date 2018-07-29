@@ -1,6 +1,6 @@
 {
   "name": "ecc-jsbn",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "ECC JS code based on JSBN",
   "main": "index.js",
   "repository": {
