@@ -29,12 +29,14 @@
     }
   ],
   "dependencies": {
-    "jsbn": "~0.1.0",
-    "safer-buffer": "^2.1.0"
+    "jsbn": "~0.1.0"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/quartzjer/ecc-jsbn/issues"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   },
   "homepage": "https://github.com/quartzjer/ecc-jsbn"
 }
